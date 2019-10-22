@@ -1,0 +1,25 @@
+.header__titles {
+  padding: 3rem 2rem 2rem;
+}
+
+.h2-like {
+  font-size: var(--small);
+  text-transform: uppercase;
+}
+
+.h1-like {
+  font-size: var(--big);
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: url(../assets/img/plan-based-coffee.png);
+  }
+}
+
+@media only screen and (min-resolution: 2dppx) {
+
+  .h1-like::after {
+    content: url(../assets/img/plan-based-coffee@2x.png);
+  }
+}
