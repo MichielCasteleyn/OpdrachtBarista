@@ -2,6 +2,7 @@
 @import './css/vars.css';
 @import './css/header.css';
 @import './css/coffeeButton.css';
+@import './css/orders.css';
 
 html {
   box-sizing: border-box;
