@@ -1,5 +1,7 @@
+@import './css/reset.css';
 @import './css/vars.css';
 @import './css/header.css';
+@import './css/coffeeButton.css';
 
 html {
   box-sizing: border-box;
@@ -18,4 +20,8 @@ body {
   color: var(--textColor);
   font-size: var(--small);
   font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.highlight {
+  background-color: var(--backgroundColor);
 }

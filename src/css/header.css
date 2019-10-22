@@ -16,10 +16,3 @@
     content: url(../assets/img/plan-based-coffee.png);
   }
 }
-
-@media only screen and (min-resolution: 2dppx) {
-
-  .h1-like::after {
-    content: url(../assets/img/plan-based-coffee@2x.png);
-  }
-}
