@@ -26,3 +26,36 @@ body {
 .highlight {
   background-color: var(--backgroundColor);
 }
+
+@media only screen and (min-width: 828px) {
+
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr auto;
+  }
+
+  .content {
+    grid-area: 1 / 2 / span2 /span2;
+  }
+
+  .prices__list {
+    grid-template-columns: 1fr;
+    margin-bottom: 4rem;
+    grid-gap: 5rem;
+  }
+
+  .prices::after {
+    content: url(/assets/img/plan-based-coffee.png);
+    position: relative;
+    margin: 5rem;
+  }
+
+  .h1-like::after {
+    content: none;
+  }
+
+  .orders__wrapper {
+    grid-template-rows: minmax(45rem, 2fr);
+  }
+}
