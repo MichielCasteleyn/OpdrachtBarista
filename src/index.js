@@ -62,6 +62,41 @@ import data from './assets/data/coffees.json';
         </button>
       </span>`;
     $list.appendChild($li);
+
+    const $orderItem = document.querySelector(`.order`);
+    const $ordersList = document.querySelector(`.orders`).contains($orderItem);
+    toggleContent($ordersList);
+
+    const $orders = document.querySelectorAll(`.order__price`);
+    total($orders);
+  };
+
+  const toggleContent = ul => {
+    const $empty = document.querySelector(`.emptystate`);
+    const $notEmpty = document.querySelector(`.orders__wrapper`);
+
+    if (ul === true) {
+      $empty.classList.add(`hide`);
+      $notEmpty.classList.remove(`hide`);
+    }
+    if (ul === false) {
+      $empty.classList.remove(`hide`);
+      $notEmpty.classList.add(`hide`);
+    }
+  };
+
+  const total = orders => {
+    const $totalAmount = document.querySelector(`.total__amount`);
+    let resTotaal = 0;
+    orders.forEach(function(order) {
+      const str = order.textContent;
+      const res = parseFloat(str.substr(2, 5));
+
+      resTotaal += res;
+
+      console.log(resTotaal);
+      $totalAmount.innerHTML = round(resTotaal);
+    });
   };
 
   init();
